@@ -1,0 +1,10 @@
+{
+  "editor": {
+    "select_title": "Language"
+  },
+  "output": {
+    "title": "Output",
+    "button": "Run Code",
+    "placeholder": "Click on 'Run Code' and check the output here"
+  }
+}
