@@ -15,6 +15,9 @@ const CodeEditor = () => {
     editorRef.current = editor;
     editor.focus();
   };
+  const runCode = () => {
+    console.log("run code");
+  };
   useEffect(() => {
     setValue(String(CODE_SNIPPETS[language as keyof Object]));
   }, [language]);
@@ -38,6 +41,7 @@ const CodeEditor = () => {
           console.log("value", value);
         }}
       />
+      <button onClick={runCode}>Run Code</button>
     </section>
   );
 };
