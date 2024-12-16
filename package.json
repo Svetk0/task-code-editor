@@ -7,10 +7,13 @@
     "dev": "vite --port 7000",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-server -w server/db.json --port 7001",
+    "routes": "json-server server/db.json -r server/routes.posts.json --port 7002"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
+    "json-server": "^1.0.0-beta.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.83.0"
