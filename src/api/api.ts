@@ -13,15 +13,18 @@ export const apiGet = async (endpoint = "/api") => {
 };
 type postProps = {
   endpoint?: string;
-  data?: string;
+  body?: string;
 };
-export const apiPost = async ({ endpoint = "/api", data = "" }: postProps) => {
+
+export const apiPost = async ({ endpoint = "/api", body = "" }: postProps) => {
   const payload = {
     method: POST,
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify({
+      data: { status: "success", executed_code: body, output: "Hello, Mickey" },
+    }),
   };
   try {
     const response = await fetch(BASE_URL + endpoint, payload);
@@ -29,7 +32,7 @@ export const apiPost = async ({ endpoint = "/api", data = "" }: postProps) => {
 
     return res;
   } catch (error) {
-    console.warn(error);
+    console.warn({ status: "error", error });
     return error;
   }
 };

@@ -58,6 +58,51 @@
     {
       "id": "7ca2",
       "value": ""
+    },
+    {
+      "id": "285e",
+      "value": "code snippet Go"
+    },
+    {
+      "id": "c2ee",
+      "value": "code rffdsf"
+    },
+    {
+      "id": "676c",
+      "output": {
+        "value": "code snippet Go"
+      }
+    },
+    {
+      "id": "3e76",
+      "output": "code snippet Go"
+    },
+    {
+      "id": "0f9a",
+      "status": "success",
+      "output": "code snippet Go"
+    },
+    {
+      "id": "c9f9",
+      "status": "success",
+      "executed_code": "code snippet Go",
+      "output": "Hello, Mickey"
+    },
+    {
+      "id": "a598",
+      "data": {
+        "status": "success",
+        "executed_code": "",
+        "output": "Hello, Mickey"
+      }
+    },
+    {
+      "id": "22bb",
+      "data": {
+        "status": "success",
+        "executed_code": "code snippet Go",
+        "output": "Hello, Mickey"
+      }
     }
   ],
   "posts": [

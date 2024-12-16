@@ -17,7 +17,7 @@ const CodeEditor = () => {
     editor.focus();
   };
   const runCode = async () => {
-    const postData = await apiPost({ data: { value } });
+    const postData = await apiPost({ body: value, endpoint: "/appi" });
     const fetchData = await apiGet("/posts");
 
     console.log("run code", fetchData, postData);
