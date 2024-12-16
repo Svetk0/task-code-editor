@@ -1,18 +1,25 @@
+import { Dispatch } from "react";
+import { CODE_SNIPPETS } from "../../constants/codeSnippets";
 import dt from "../../constants/data.json";
 import styles from "./LanguageSelect.module.scss";
-import { LANGUAGES_Vs } from "../../constants/codeSnippets";
-function LanguageSelect() {
-  //const dt = staticData;
-  const languages = Object.entries(LANGUAGES_Vs);
-  console.log("languages", languages);
+
+type Props = {
+  language?: string;
+  setLanguage: Dispatch<string>;
+};
+function LanguageSelect({ language, setLanguage }: Props) {
+  const languages = Object.keys(CODE_SNIPPETS);
+
   return (
     <section className={styles.container}>
       {dt.editor.select_title}
-      <select>
-        {languages.map(([lang, ver]) => (
-          <option key={lang}>
-            {lang} {ver}
-          </option>
+
+      <select
+        value={language}
+        onChange={(event) => setLanguage(event.target.value)}
+      >
+        {languages.map((lang) => (
+          <option key={lang}>{lang}</option>
         ))}
       </select>
     </section>
