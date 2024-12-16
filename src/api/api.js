@@ -1,6 +1,6 @@
-import { SERVER_URL, POST, DELETE, PUT } from "../constants/serverConst";
+import { BASE_URL, POST, DELETE, PUT } from "../constants/serverConst";
 
-export const api = async (method, payload, endpoint = SERVER_URL) => {
+export const api = async (method, payload, endpoint = '/api') => {
   let config = {};
 
   if (method) {
