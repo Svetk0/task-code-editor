@@ -12,16 +12,22 @@ const CodeEditor = () => {
   const editorRef = useRef();
   const [value, setValue] = useState<string | undefined>("");
   const [language, setLanguage] = useState<string>("javascript");
+  const [output, setOutput] = useState<string>("");
 
   const onMount = (editor: any) => {
     editorRef.current = editor;
     editor.focus();
   };
   const runCode = async () => {
-    const postData = await apiPost({ body: value, endpoint: "/appi" });
-    const fetchData = await apiGet("/posts");
+    const postData = await apiPost({ body: value, endpoint: "/api" });
 
-    console.log("run code", fetchData, postData);
+    if (postData.data) {
+      setOutput(postData.data.output);
+    } else {
+      setOutput("SyntaxError: Unexpected token");
+    }
+
+    console.log("run code", postData, postData.error);
   };
   useEffect(() => {
     setValue(String(CODE_SNIPPETS[language as keyof Object]));
@@ -56,7 +62,7 @@ const CodeEditor = () => {
         </div>
 
         <div className={styles.wrapperColumn}>
-          <Output output={value} />
+          <Output output={output} />
         </div>
       </div>
     </section>

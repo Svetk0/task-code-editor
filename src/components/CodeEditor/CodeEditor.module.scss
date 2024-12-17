@@ -12,12 +12,12 @@
     gap: 30px;
 
     &_buttons {
-        flex: 1 160px;
         margin-bottom: 10px;
+        gap: 15px;
 
-        //padding-left: 20px;
         >button {
             width: 160px;
+            margin-right: auto;
         }
     }
 }

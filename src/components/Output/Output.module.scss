@@ -15,5 +15,8 @@
         padding: 30px 20px;
         border-radius: 7px;
 
+        &_placeholder {
+            color: $grey;
+        }
     }
 }

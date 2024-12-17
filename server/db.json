@@ -103,6 +103,30 @@
         "executed_code": "code snippet Go",
         "output": "Hello, Mickey"
       }
+    },
+    {
+      "id": "e3b3",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name + \"!:)\");\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Hello, Mickey"
+      }
+    },
+    {
+      "id": "e407",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name + \"!:)\");\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Hello, Mickey"
+      }
+    },
+    {
+      "id": "66a7",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name + \"!:)\");\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Hello, Mickey"
+      }
     }
   ],
   "posts": [
