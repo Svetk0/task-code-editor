@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import styles from "./CodeEditor.module.scss";
 import { CODE_SNIPPETS } from "../../constants/codeSnippets";
 import LanguageSelect from "../LanguageSelect/LanguageSelect";
+import { apiGet, apiPost } from "../../api/api.ts";
 
 const CodeEditor = () => {
   //const dt = staticData;
@@ -15,9 +16,16 @@ const CodeEditor = () => {
     editorRef.current = editor;
     editor.focus();
   };
+  const runCode = async () => {
+    const postData = await apiPost({ body: value, endpoint: "/appi" });
+    const fetchData = await apiGet("/posts");
+
+    console.log("run code", fetchData, postData);
+  };
   useEffect(() => {
     setValue(String(CODE_SNIPPETS[language as keyof Object]));
   }, [language]);
+
   return (
     <section className={styles.container}>
       <LanguageSelect language={language} setLanguage={setLanguage} />
@@ -38,6 +46,7 @@ const CodeEditor = () => {
           console.log("value", value);
         }}
       />
+      <button onClick={runCode}>Run Code</button>
     </section>
   );
 };
