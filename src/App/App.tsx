@@ -1,12 +1,23 @@
+import { useState } from "react";
 import CodeEditor from "../components/CodeEditor/CodeEditor";
+import "./App.scss";
 
 function App() {
-  //const [count, setCount] = useState(0);
-
+  const [errorMode, setErrorMode] = useState<boolean>(false);
   return (
-    <main>
-      <CodeEditor />
-    </main>
+    <>
+      <header>
+        <button
+          className={errorMode ? `button_error` : ""}
+          onClick={() => setErrorMode(!errorMode)}
+        >
+          {errorMode ? "Disable Error Mode" : "Enable Error Mode"}
+        </button>
+      </header>
+      <main>
+        <CodeEditor errorMode={errorMode} />
+      </main>
+    </>
   );
 }
 

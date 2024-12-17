@@ -7,18 +7,19 @@ import LanguageSelect from "../LanguageSelect/LanguageSelect";
 import { apiPost } from "../../api/api.ts";
 import Output from "../Output/Output.tsx";
 
-const CodeEditor = () => {
+function CodeEditor(errorMode) {
   const editorRef = useRef();
   const [value, setValue] = useState<string | undefined>("");
   const [language, setLanguage] = useState<string>("javascript");
   const [output, setOutput] = useState<string>("");
+  const [endpoint, setEndpoint] = useState<string>("/api");
 
   const onMount = (editor: any) => {
     editorRef.current = editor;
     editor.focus();
   };
   const runCode = async () => {
-    const postData = await apiPost({ body: value, endpoint: "/api" });
+    const postData = await apiPost({ body: value, endpoint: endpoint });
 
     if (postData.data) {
       setOutput(postData.data.output);
@@ -31,6 +32,15 @@ const CodeEditor = () => {
   useEffect(() => {
     setValue(String(CODE_SNIPPETS[language as keyof Object]));
   }, [language]);
+  useEffect(() => {
+    const errMode = Object.values(errorMode)[0];
+    console.log(Object.values(errorMode)[0]);
+    if (errMode === true) {
+      setEndpoint("/appi");
+    } else {
+      setEndpoint("/api");
+    }
+  }, [errorMode]);
 
   return (
     <section className={styles.container}>
@@ -66,6 +76,6 @@ const CodeEditor = () => {
       </div>
     </section>
   );
-};
+}
 
 export default CodeEditor;
