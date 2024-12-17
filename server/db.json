@@ -127,6 +127,46 @@
         "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name + \"!:)\");\n}\n\ngreetings(\"Mickey\");\n",
         "output": "Hello, Mickey"
       }
+    },
+    {
+      "id": "e3e6",
+      "data": {
+        "status": "success",
+        "executed_code": "code snippet Gobjbnn",
+        "output": "Hello, Mickey"
+      }
+    },
+    {
+      "id": "b1c8",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "4966",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "5a5b",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "7cc4",
+      "data": {
+        "status": "success",
+        "executed_code": "code snippet Go",
+        "output": "Welcome, Mickey"
+      }
     }
   ],
   "posts": [

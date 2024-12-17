@@ -1,14 +1,13 @@
 import { Editor } from "@monaco-editor/react";
 import { useRef, useState, useEffect } from "react";
-//import dt from "../../constants/data.json";
+
 import styles from "./CodeEditor.module.scss";
 import { CODE_SNIPPETS } from "../../constants/codeSnippets";
 import LanguageSelect from "../LanguageSelect/LanguageSelect";
-import { apiGet, apiPost } from "../../api/api.ts";
+import { apiPost } from "../../api/api.ts";
 import Output from "../Output/Output.tsx";
 
 const CodeEditor = () => {
-  //const dt = staticData;
   const editorRef = useRef();
   const [value, setValue] = useState<string | undefined>("");
   const [language, setLanguage] = useState<string>("javascript");

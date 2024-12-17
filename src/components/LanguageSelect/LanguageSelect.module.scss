@@ -1,5 +1,15 @@
+@import '../../styles/index.scss';
+
 .container {
     display: flex;
     gap: 10px;
     width: 50%;
+}
+
+.select {
+    border-radius: 5px;
+    padding-inline: 5px;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    background-color: $dark-grey;
 }

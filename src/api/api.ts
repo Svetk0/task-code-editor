@@ -23,7 +23,11 @@ export const apiPost = async ({ endpoint = "/api", body = "" }: postProps) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      data: { status: "success", executed_code: body, output: "Hello, Mickey" },
+      data: {
+        status: "success",
+        executed_code: body,
+        output: "Welcome, Mickey",
+      },
     }),
   };
   try {
@@ -32,7 +36,7 @@ export const apiPost = async ({ endpoint = "/api", body = "" }: postProps) => {
 
     return res;
   } catch (error) {
-    console.warn({ status: "error", error });
+    console.warn({ data: { status: "error", error } });
     return error;
   }
 };
