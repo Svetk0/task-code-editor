@@ -5,12 +5,13 @@ import styles from "./CodeEditor.module.scss";
 import { CODE_SNIPPETS } from "../../constants/codeSnippets";
 import LanguageSelect from "../LanguageSelect/LanguageSelect";
 import { apiGet, apiPost } from "../../api/api.ts";
+import Output from "../Output/Output.tsx";
 
 const CodeEditor = () => {
   //const dt = staticData;
   const editorRef = useRef();
   const [value, setValue] = useState<string | undefined>("");
-  const [language, setLanguage] = useState<string>("go");
+  const [language, setLanguage] = useState<string>("javascript");
 
   const onMount = (editor: any) => {
     editorRef.current = editor;
@@ -28,25 +29,36 @@ const CodeEditor = () => {
 
   return (
     <section className={styles.container}>
-      <LanguageSelect language={language} setLanguage={setLanguage} />
-      <Editor
-        options={{
-          minimap: {
-            enabled: false,
-          },
-        }}
-        height="60vh"
-        theme="vs-dark"
-        language={language}
-        defaultValue={String(CODE_SNIPPETS[language as keyof Object])}
-        onMount={onMount}
-        value={value}
-        onChange={(value) => {
-          setValue(value);
-          console.log("value", value);
-        }}
-      />
-      <button onClick={runCode}>Run Code</button>
+      <div className={`${styles.wrapperRow} ${styles.wrapperRow_buttons}`}>
+        <LanguageSelect language={language} setLanguage={setLanguage} />
+        <button onClick={runCode}>Run Code</button>
+      </div>
+      <div className={styles.wrapperRow}>
+        <div className={styles.wrapperColumn}>
+          <Editor
+            options={{
+              minimap: {
+                enabled: false,
+              },
+            }}
+            height="100%"
+            width="100%"
+            theme="vs-dark"
+            language={language}
+            defaultValue={String(CODE_SNIPPETS[language as keyof Object])}
+            onMount={onMount}
+            value={value}
+            onChange={(value) => {
+              setValue(value);
+              console.log("value", value);
+            }}
+          />
+        </div>
+
+        <div className={styles.wrapperColumn}>
+          <Output output={value} />
+        </div>
+      </div>
     </section>
   );
 };

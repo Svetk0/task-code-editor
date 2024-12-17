@@ -12,6 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 a {
   font-weight: 500;
@@ -28,6 +33,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+main {
+  width: 100vw;
+  padding: 20px;
 }
 
 h1 {

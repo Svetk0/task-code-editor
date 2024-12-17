@@ -1,3 +1,46 @@
+@import '../../styles/index.scss';
+
 .container {
-    width: 100vw;
+    width: 100%;
+}
+
+.wrapperRow {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    &_buttons {
+        flex: 1 160px;
+        margin-bottom: 10px;
+
+        //padding-left: 20px;
+        >button {
+            width: 160px;
+        }
+    }
+}
+
+.wrapperColumn {
+    width: 50%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media (max-width: $tablet) {
+    .wrapperRow {
+        flex-direction: column;
+
+        &_buttons {
+            flex-direction: row;
+        }
+    }
+
+    .wrapperColumn {
+        width: 100%;
+        height: 60vh;
+    }
 }
