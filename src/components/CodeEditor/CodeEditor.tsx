@@ -7,10 +7,10 @@ import LanguageSelect from "../LanguageSelect/LanguageSelect";
 import { apiPost } from "../../api/api.ts";
 import Output from "../Output/Output.tsx";
 
-function CodeEditor(errorMode) {
+function CodeEditor(errorMode: boolean | any) {
   const editorRef = useRef();
   const [value, setValue] = useState<string | undefined>("");
-  const [language, setLanguage] = useState<string>("javascript");
+  const [language, setLanguage] = useState<string>("JavaScript");
   const [output, setOutput] = useState<string>("");
   const [endpoint, setEndpoint] = useState<string>("/api");
 

@@ -1,6 +1,6 @@
 export const CODE_SNIPPETS: Object = {
-  javascript: `\nfunction greetings(name) {\n\tconsole.log("Welcome, " + name);\n}\n\ngreetings("Mickey");\n`,
-  go: `
+  JavaScript: `\nfunction greetings(name) {\n\tconsole.log("Welcome, " + name);\n}\n\ngreetings("Mickey");\n`,
+  Go: `
   package main
   import "fmt"
 
@@ -11,7 +11,7 @@ export const CODE_SNIPPETS: Object = {
   func main() {
     greetings("Mickey")
   }`,
-  python: `def greetings(name): \n\tprint("Welcome, " + name) 
+  Python: `def greetings(name): \n\tprint("Welcome, " + name) 
   \ngreetings("Mickey")
 `,
 };

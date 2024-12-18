@@ -14,7 +14,7 @@
         background-color: $dark-grey;
         color: $white;
         padding: 30px 20px;
-        border-radius: 7px;
+        border-radius: $radius-small;
 
         &_placeholder {
             color: $grey;

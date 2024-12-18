@@ -13,11 +13,18 @@
 
     &_buttons {
         margin-bottom: 10px;
-        gap: 15px;
 
         >button {
             width: 160px;
             margin-right: auto;
+            background-color: $cyan-op80;
+            border: 1px solid $white;
+            transition: 0.5s ease all;
+
+            &:hover {
+                background-color: $bright-dark-yellow;
+            }
+
         }
     }
 }
@@ -36,6 +43,18 @@
 
         &_buttons {
             flex-direction: row;
+
+            align-items: center;
+            justify-content: center;
+
+            >button {
+                margin-right: 0;
+            }
+
+            >section {
+                width: 100%;
+                flex-wrap: wrap;
+            }
         }
     }
 

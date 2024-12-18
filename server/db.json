@@ -295,6 +295,46 @@
         "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
         "output": "Welcome, Mickey"
       }
+    },
+    {
+      "id": "97af",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "004e",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "57e9",
+      "data": {
+        "status": "success",
+        "executed_code": "def greetings(name): \n\tprint(\"Welcome, \" + name) \n  \ngreetings(\"Mickey\")\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "11df",
+      "data": {
+        "status": "success",
+        "executed_code": "def greetings(name): \n\tprint(\"Welcome, \" + name) \n  \ngreetings(\"Mickey\")\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "e6f8",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
     }
   ],
   "posts": [
