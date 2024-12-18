@@ -1,6 +1,6 @@
 # Code Editor app
 
-### Deploy on Vercel (static part)
+### Deploy on Vercel
 
 https://task-code-editor.vercel.app/
 
@@ -55,10 +55,6 @@ npm run fullstack
 ```bash
 http://localhost:7000/ #copy and paste in the browser
 ```
-
-## Limitations
-
-1. The Error Mode switching works only on localhost
 
 ## Upgrade Suggestions
 
