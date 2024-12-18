@@ -343,6 +343,22 @@
         "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
         "output": "Welcome, Mickey"
       }
+    },
+    {
+      "id": "4da1",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "33f4",
+      "data": {
+        "status": "success",
+        "executed_code": "def greetings(name): \n\tprint(\"Welcome, \" + name) \n  \ngreetings(\"Mickey\")\n",
+        "output": "Welcome, Mickey"
+      }
     }
   ],
   "posts": [
