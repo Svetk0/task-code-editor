@@ -6,18 +6,5 @@
     "title": "Output",
     "button": "Run Code",
     "placeholder": "Click on 'Run Code' and check the output here"
-  },
-  "error_mode": {
-    "on": "Disable Error Mode",
-    "off": "Enable Error Mode"
-  },
-  "task": {
-    "title": "Task description",
-    "description": "Create a function that should print a greetings",
-    "tips": {
-      "title": "Tips",
-      "subtitle": "Click here to open",
-      "description": "Learn how to create a function;Don't forget to call the function "
-    }
   }
 }

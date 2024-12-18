@@ -12,9 +12,9 @@ function LanguageSelect({ language, setLanguage }: Props) {
 
   return (
     <section className={styles.container}>
-      <h2> {dt.editor.select_title}</h2>
+      {dt.editor.select_title}
+
       <select
-        className={styles.select}
         value={language}
         onChange={(event) => setLanguage(event.target.value)}
       >
