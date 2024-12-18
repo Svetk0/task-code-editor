@@ -26,15 +26,12 @@ function CodeEditor(errorMode: boolean | any) {
     } else {
       setOutput("SyntaxError: Unexpected token");
     }
-
-    console.log("run code", postData, postData.error);
   };
   useEffect(() => {
     setValue(String(CODE_SNIPPETS[language as keyof Object]));
   }, [language]);
   useEffect(() => {
     const errMode = Object.values(errorMode)[0];
-    console.log(Object.values(errorMode)[0]);
     if (errMode === true) {
       setEndpoint("/appi");
     } else {
@@ -56,7 +53,7 @@ function CodeEditor(errorMode: boolean | any) {
                 enabled: false,
               },
             }}
-            height="100%"
+            //height="100%"
             width="100%"
             theme="vs-dark"
             language={language.toLowerCase()}

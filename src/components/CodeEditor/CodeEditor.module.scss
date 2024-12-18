@@ -30,7 +30,7 @@
 
 .wrapperColumn {
     width: 50%;
-    height: 75vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -48,7 +48,6 @@
             flex-direction: row;
 
             >section {
-                //width: 100%;
                 flex-wrap: wrap;
             }
         }
@@ -56,6 +55,5 @@
 
     .wrapperColumn {
         width: 100%;
-        height: 60vh;
     }
 }
