@@ -1,11 +1,13 @@
 import { Editor } from "@monaco-editor/react";
 import { useRef, useState, useEffect } from "react";
 
-import styles from "./CodeEditor.module.scss";
-import { CODE_SNIPPETS } from "../../constants/codeSnippets";
-import LanguageSelect from "../LanguageSelect/LanguageSelect";
 import { apiPost } from "../../api/api.ts";
+import { CODE_SNIPPETS } from "../../constants/codeSnippets";
+
+import LanguageSelect from "../LanguageSelect/LanguageSelect";
 import Output from "../Output/Output.tsx";
+
+import styles from "./CodeEditor.module.scss";
 
 function CodeEditor(errorMode: boolean | any) {
   const editorRef = useRef();
@@ -18,20 +20,20 @@ function CodeEditor(errorMode: boolean | any) {
     editorRef.current = editor;
     editor.focus();
   };
+
   const runCode = async () => {
     const postData = await apiPost({ body: value, endpoint: endpoint });
-
     if (postData.data) {
       setOutput(postData.data.output);
     } else {
       setOutput("SyntaxError: Unexpected token");
     }
-
-    console.log("run code", postData, postData.error);
   };
+
   useEffect(() => {
     setValue(String(CODE_SNIPPETS[language as keyof Object]));
   }, [language]);
+
   useEffect(() => {
     const errMode = Object.values(errorMode)[0];
     console.log(Object.values(errorMode)[0]);
@@ -68,7 +70,6 @@ function CodeEditor(errorMode: boolean | any) {
             }}
           />
         </div>
-
         <div className={styles.wrapperColumn}>
           <Output output={output} />
         </div>

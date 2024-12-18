@@ -4,6 +4,7 @@ import styles from "./Output.module.scss";
 type Props = {
   output?: string;
 };
+
 function Output({ output }: Props) {
   return (
     <section className={styles.container}>

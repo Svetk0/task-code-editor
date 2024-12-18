@@ -5,7 +5,6 @@ import styles from "./Task.module.scss";
 function Task() {
   const tips = dt.task.tips.description.split(";");
   const [isOpened, setIsOpened] = useState<boolean>(false);
-
   return (
     <section className={styles.container}>
       <article

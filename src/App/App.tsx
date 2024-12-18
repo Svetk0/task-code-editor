@@ -1,6 +1,8 @@
 import { useState } from "react";
+
 import Task from "../components/Task/Task";
 import CodeEditor from "../components/CodeEditor/CodeEditor";
+
 import dt from "../constants/data.json";
 import "./App.scss";
 
