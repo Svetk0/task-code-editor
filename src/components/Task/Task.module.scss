@@ -29,6 +29,7 @@
             color: $white;
             max-width: 350px;
             max-height: clamp(100px, 100%, 140px);
+            cursor: pointer;
 
             >h3 {
                 color: $orange;

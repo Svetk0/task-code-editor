@@ -4,7 +4,6 @@ export const apiGet = async (endpoint = "/api") => {
   try {
     const response = await fetch(BASE_URL + endpoint);
     const res = await response.json();
-    //console.log(response, res);
     return res;
   } catch (error) {
     console.warn(error);
@@ -36,7 +35,6 @@ export const apiPost = async ({ endpoint = "/api", body = "" }: postProps) => {
 
     return res;
   } catch (error) {
-    console.warn({ data: { status: "error", error } });
     return error;
   }
 };

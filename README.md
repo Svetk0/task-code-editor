@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# Code Editor app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Deploy on Vercel (static part)
 
-Currently, two official plugins are available:
+https://task-code-editor.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## App description
 
-## Expanding the ESLint configuration
+The Code Editor App has next features:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- support 3 programming languages (Javascript, Go, Python)
+- mock server (JSON Server) to execute user code
+- Error Mode switching using UI
+- adaptive and responsive for mobile devices
 
-- Configure the top-level `parserOptions` property like this:
+<div align="center">
+<img src="./public/readme.png" alt="alt text" width="100%"/>
+</div>
+<br>
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Stack:
+
+- React + TS
+- Vite
+- Sass
+
+## Installation and Running
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/Svetk0/task-code-editor.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Move to project folder
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+ cd task-code-editor
 ```
+
+3. Install all dependencies from `package.json`
+
+```bash
+npm install
+```
+
+4. If success RUN project
+
+```bash
+npm run fullstack
+```
+
+5. Check the local host on the port 7000 (server will be run on the port 7001 simultaneously) <br>
+
+```bash
+http://localhost:7000/ #copy and paste in the browser
+```
+
+## Limitations
+
+1. The Error Mode switching works only on localhost
+
+## Upgrade Suggestions
+
+1. Use a real API (like https://piston.readthedocs.io/en/latest/api-v2/)
+2. Tips block should be updated according to Task block (relevant subjects and topics that need to solve the task)
+3. Add more languages
