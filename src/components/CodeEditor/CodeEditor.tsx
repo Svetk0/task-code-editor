@@ -59,13 +59,12 @@ function CodeEditor(errorMode: boolean | any) {
             height="100%"
             width="100%"
             theme="vs-dark"
-            language={language}
+            language={language.toLowerCase()}
             defaultValue={String(CODE_SNIPPETS[language as keyof Object])}
             onMount={onMount}
             value={value}
             onChange={(value) => {
               setValue(value);
-              console.log("value", value);
             }}
           />
         </div>
