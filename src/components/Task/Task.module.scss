@@ -6,11 +6,11 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 40px;
     gap: 30px;
+    margin-bottom: 70px;
 
     .wrapperColumn {
-        width: 50%;
+        width: 48%;
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -18,7 +18,6 @@
         padding: 10px;
 
         &__task {
-            width: 100%;
             background-color: $dark-grey;
             color: $white;
             min-height: 140px;
