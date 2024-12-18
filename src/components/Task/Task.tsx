@@ -1,9 +1,11 @@
+import { useState } from "react";
 import dt from "../../constants/data.json";
 import styles from "./Task.module.scss";
 
 function Task() {
   const tips = dt.task.tips.description.split(";");
-  console.log("tips", tips);
+  const [isOpened, setIsOpened] = useState<boolean>(false);
+
   return (
     <section className={styles.container}>
       <article
@@ -14,13 +16,17 @@ function Task() {
       </article>
       <article
         className={`${styles.wrapperColumn} ${styles.wrapperColumn__tips}`}
+        onClick={() => setIsOpened(!isOpened)}
       >
-        <h3> {dt.task.tips.title}</h3>
-        <ol className={styles.tips}>
-          {tips.map((tip) => (
-            <li key={tip}>{tip}</li>
-          ))}
-        </ol>
+        <h3>{dt.task.tips.title}</h3>
+        {!isOpened && <p>{dt.task.tips.subtitle} </p>}
+        {isOpened && (
+          <ol className={styles.tips}>
+            {tips.map((tip) => (
+              <li key={tip}>{tip}</li>
+            ))}
+          </ol>
+        )}
       </article>
     </section>
   );

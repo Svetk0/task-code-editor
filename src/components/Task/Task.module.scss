@@ -6,8 +6,8 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 30px;
     margin-bottom: 40px;
+    gap: 30px;
 
     .wrapperColumn {
         width: 50%;
@@ -16,17 +16,20 @@
         gap: 5px;
         border-radius: $radius-small;
         padding: 10px;
-        align-self: stretch;
 
         &__task {
+            width: 100%;
             background-color: $dark-grey;
             color: $white;
+            min-height: 140px;
+            align-self: stretch;
         }
 
         &__tips {
             background-color: $yellow-op50;
             color: $white;
-            max-width: 500px;
+            max-width: 350px;
+            max-height: clamp(100px, 100%, 140px);
 
             >h3 {
                 color: $orange;
@@ -36,6 +39,8 @@
         .tips {
             align-self: center;
             padding: 5px 20px;
+            overflow-y: scroll;
+            align-self: stretch;
         }
     }
 }
