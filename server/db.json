@@ -335,6 +335,14 @@
         "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
         "output": "Welcome, Mickey"
       }
+    },
+    {
+      "id": "78a1",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
     }
   ],
   "posts": [

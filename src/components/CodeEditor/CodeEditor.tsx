@@ -44,12 +44,12 @@ function CodeEditor(errorMode: boolean | any) {
 
   return (
     <section className={styles.container}>
-      <div className={`${styles.wrapperRow} ${styles.wrapperRow_buttons}`}>
-        <LanguageSelect language={language} setLanguage={setLanguage} />
-        <button onClick={runCode}>Run Code</button>
-      </div>
       <div className={styles.wrapperRow}>
         <div className={styles.wrapperColumn}>
+          <div className={`${styles.wrapperRow} ${styles.wrapperRow__buttons}`}>
+            <LanguageSelect language={language} setLanguage={setLanguage} />
+            <button onClick={runCode}>Run Code</button>
+          </div>
           <Editor
             options={{
               minimap: {
