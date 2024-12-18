@@ -36,7 +36,6 @@ export const apiPost = async ({ endpoint = "/api", body = "" }: postProps) => {
 
     return res;
   } catch (error) {
-    console.warn({ data: { status: "error", error } });
     return error;
   }
 };
