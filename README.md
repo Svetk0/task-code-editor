@@ -53,9 +53,11 @@ npm run fullstack
 5. Check the local host on the port 7000 (server will be run on the port 7001 simultaneously) <br>
 
 ```bash
-http://localhost:7000/ #copy and paste in the browser
+http://localhost:7000/
 ```
-
+## Limitations
+1. the Error Mode works only localhost
+   
 ## Upgrade Suggestions
 
 1. Use a real API (like https://piston.readthedocs.io/en/latest/api-v2/)
