@@ -3,8 +3,9 @@ import styles from "./Output.module.scss";
 
 type Props = {
   output?: string;
+  isError?: boolean;
 };
-function Output({ output }: Props) {
+function Output({ output, isError }: Props) {
   return (
     <section className={styles.container}>
       <h2> {dt.output.title}</h2>
@@ -15,7 +16,15 @@ function Output({ output }: Props) {
           {dt.output.placeholder}
         </div>
       ) : (
-        <div className={styles.outputBlock}>{output}</div>
+        <div
+          className={
+            isError
+              ? `${styles.outputBlock} ${styles.outputBlock_error}`
+              : `${styles.outputBlock}`
+          }
+        >
+          {output}
+        </div>
       )}
     </section>
   );

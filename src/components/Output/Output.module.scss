@@ -12,12 +12,17 @@
         width: inherit;
         height: inherit;
         background-color: $dark-grey;
-        color: $white;
+        color: $white-op20;
         padding: 30px 20px;
         border-radius: $radius-small;
 
         &_placeholder {
             color: $grey;
+        }
+
+        &_error {
+            color: $red;
+            border: 1px solid $red;
         }
     }
 }

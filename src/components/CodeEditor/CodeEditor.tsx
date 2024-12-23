@@ -14,6 +14,7 @@ function CodeEditor() {
   const [language, setLanguage] = useState<string>("JavaScript");
   const [output, setOutput] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
   const onMount = (editor: any) => {
     editorRef.current = editor;
     editor.focus();
@@ -28,8 +29,10 @@ function CodeEditor() {
     console.log("execute", executeCode);
     if (executeCode) setIsLoading(false);
     if (executeCode.run.code === 0) {
+      setIsError(false);
       setOutput(executeCode.run.output);
     } else {
+      setIsError(true);
       setOutput("SyntaxError: Unexpected token");
       console.error(executeCode.run.output);
     }
@@ -71,7 +74,7 @@ function CodeEditor() {
         </div>
 
         <div className={styles.wrapperColumn}>
-          <Output output={output} />
+          <Output output={output} isError={isError} />
         </div>
       </div>
     </section>
