@@ -8,13 +8,11 @@ https://task-code-editor.vercel.app/
 
 The Code Editor App has next features:
 
-- support 3 programming languages (Javascript, Go, Python)
-- mock server (JSON Server) to execute user code
-- Error Mode switching using UI
+- support 3 programming languages (Javascript, Go, Python3)
 - adaptive and responsive for mobile devices
 
 <div align="center">
-<img src="./public/readme.png" alt="alt text" width="100%"/>
+<img src="./public/readme.png" alt="screenshots app" width="100%"/>
 </div>
 <br>
 
@@ -53,18 +51,27 @@ cd task-code-editor
 npm install
 ```
 
-5. Check the local host on the port 7000 (server will be run on the port 7001 simultaneously) <br>
+4. Run the project
+
+- Run only Front
+
+```bash
+npm run dev
+```
+
+- Run Front and Back (Mock Server) simultaneously (server will be run on the port 7001)
+
+```bash
+npm run fullstack
+```
+
+5. Check the local host on the port 7000 <br>
 
 ```bash
 http://localhost:7000/
 ```
 
-## Limitations
-
-1. the Error Mode works correctly only in Chrome and Mozilla browsers
-
 ## Upgrade Suggestions
 
-1. Use a real API (like https://piston.readthedocs.io/en/latest/api-v2/)
-2. Tips block should be updated according to Task block (relevant subjects and topics that need to solve the task)
-3. Add more languages
+1. Tips block should be updated according to Task block (relevant subjects and topics that need to solve the task)
+2. Add more languages
