@@ -13,18 +13,20 @@ function CodeEditor() {
   const [value, setValue] = useState<string | undefined>("");
   const [language, setLanguage] = useState<string>("JavaScript");
   const [output, setOutput] = useState<string>("");
-
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const onMount = (editor: any) => {
     editorRef.current = editor;
     editor.focus();
   };
   const runCode = async () => {
+    setIsLoading(true);
     const executeCode = await fetchExecuteCode({
       body: value,
       language: language,
     });
 
     console.log("execute", executeCode);
+    if (executeCode) setIsLoading(false);
     if (executeCode.run.code === 0) {
       setOutput(executeCode.run.output);
     } else {
@@ -42,7 +44,13 @@ function CodeEditor() {
         <div className={styles.wrapperColumn}>
           <div className={`${styles.wrapperRow} ${styles.wrapperRow__buttons}`}>
             <LanguageSelect language={language} setLanguage={setLanguage} />
-            <button onClick={runCode}>Run Code</button>
+            <button onClick={runCode}>
+              {isLoading ? (
+                <i className="fa fa-spinner fa-spin"></i>
+              ) : (
+                "Run Code"
+              )}
+            </button>
           </div>
           <Editor
             options={{
