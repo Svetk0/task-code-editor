@@ -4,40 +4,37 @@ import { useRef, useState, useEffect } from "react";
 import styles from "./CodeEditor.module.scss";
 import { CODE_SNIPPETS } from "../../constants/codeSnippets";
 import LanguageSelect from "../LanguageSelect/LanguageSelect";
-import { apiPost } from "../../api/api.ts";
+
+import { fetchExecuteCode } from "../../api/api.ts";
 import Output from "../Output/Output.tsx";
 
-function CodeEditor(errorMode: boolean | any) {
+function CodeEditor() {
   const editorRef = useRef();
   const [value, setValue] = useState<string | undefined>("");
   const [language, setLanguage] = useState<string>("JavaScript");
   const [output, setOutput] = useState<string>("");
-  const [endpoint, setEndpoint] = useState<string>("/api");
 
   const onMount = (editor: any) => {
     editorRef.current = editor;
     editor.focus();
   };
   const runCode = async () => {
-    const postData = await apiPost({ body: value, endpoint: endpoint });
+    const executeCode = await fetchExecuteCode({
+      body: value,
+      language: language,
+    });
 
-    if (postData.data) {
-      setOutput(postData.data.output);
+    console.log("execute", executeCode);
+    if (executeCode.run.code === 0) {
+      setOutput(executeCode.run.output);
     } else {
       setOutput("SyntaxError: Unexpected token");
+      console.error(executeCode.run.output);
     }
   };
   useEffect(() => {
     setValue(String(CODE_SNIPPETS[language as keyof Object]));
   }, [language]);
-  useEffect(() => {
-    const errMode = Object.values(errorMode)[0];
-    if (errMode === true) {
-      setEndpoint("/appi");
-    } else {
-      setEndpoint("/api");
-    }
-  }, [errorMode]);
 
   return (
     <section className={styles.container}>
