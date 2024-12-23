@@ -1,6 +1,6 @@
 # Code Editor app
 
-### Deploy on Vercel (static part)
+### Deploy on Vercel
 
 https://task-code-editor.vercel.app/
 
@@ -35,7 +35,7 @@ git clone https://github.com/Svetk0/task-code-editor.git
 2. Move to project folder
 
 ```bash
- cd task-code-editor
+cd task-code-editor
 ```
 
 3. Install all dependencies from `package.json`
@@ -44,21 +44,15 @@ git clone https://github.com/Svetk0/task-code-editor.git
 npm install
 ```
 
-4. If success RUN project
-
-```bash
-npm run fullstack
-```
-
 5. Check the local host on the port 7000 (server will be run on the port 7001 simultaneously) <br>
 
 ```bash
-http://localhost:7000/ #copy and paste in the browser
+http://localhost:7000/
 ```
 
 ## Limitations
 
-1. The Error Mode switching works only on localhost
+1. the Error Mode works correctly only in Chrome and Mozilla browsers
 
 ## Upgrade Suggestions
 
