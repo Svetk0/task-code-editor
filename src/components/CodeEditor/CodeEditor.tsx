@@ -5,38 +5,18 @@ import styles from "./CodeEditor.module.scss";
 import { CODE_SNIPPETS } from "../../constants/codeSnippets";
 import LanguageSelect from "../LanguageSelect/LanguageSelect";
 
-import { fetchExecuteCode } from "../../api/api.ts";
 import Output from "../Output/Output.tsx";
 
 function CodeEditor() {
   const editorRef = useRef();
   const [value, setValue] = useState<string | undefined>("");
   const [language, setLanguage] = useState<string>("JavaScript");
-  const [output, setOutput] = useState<string>("");
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isError, setIsError] = useState<boolean>(false);
+
   const onMount = (editor: any) => {
     editorRef.current = editor;
     editor.focus();
   };
-  const runCode = async () => {
-    setIsLoading(true);
-    const executeCode = await fetchExecuteCode({
-      body: value,
-      language: language,
-    });
 
-    console.log("execute", executeCode);
-    if (executeCode) setIsLoading(false);
-    if (executeCode.run.code === 0) {
-      setIsError(false);
-      setOutput(executeCode.run.output);
-    } else {
-      setIsError(true);
-      setOutput("SyntaxError: Unexpected token");
-      console.error(executeCode.run.output);
-    }
-  };
   useEffect(() => {
     setValue(String(CODE_SNIPPETS[language as keyof Object]));
   }, [language]);
@@ -45,16 +25,7 @@ function CodeEditor() {
     <section className={styles.container}>
       <div className={styles.wrapperRow}>
         <div className={styles.wrapperColumn}>
-          <div className={`${styles.wrapperRow} ${styles.wrapperRow__buttons}`}>
-            <LanguageSelect language={language} setLanguage={setLanguage} />
-            <button onClick={runCode}>
-              {isLoading ? (
-                <i className="fa fa-spinner fa-spin"></i>
-              ) : (
-                "Run Code"
-              )}
-            </button>
-          </div>
+          <LanguageSelect language={language} setLanguage={setLanguage} />
           <Editor
             options={{
               minimap: {
@@ -73,8 +44,10 @@ function CodeEditor() {
           />
         </div>
 
-        <div className={styles.wrapperColumn}>
-          <Output output={output} isError={isError} />
+        <div
+          className={`${styles.wrapperColumn} ${styles.wrapperColumn_shorts}`}
+        >
+          <Output language={language} code={value} />
         </div>
       </div>
     </section>

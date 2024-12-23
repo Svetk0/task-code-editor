@@ -2,6 +2,7 @@
 
 .container {
     width: 100%;
+
 }
 
 .wrapperRow {
@@ -33,7 +34,7 @@
     height: 60vh;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 
     >section>h2 {
         align-self: center;
@@ -42,18 +43,20 @@
 
 @media (max-width: $tablet) {
     .wrapperRow {
-        flex-direction: column;
+        flex-direction: column-reverse;
 
-        &__buttons {
-            flex-direction: row;
-
-            >section {
-                flex-wrap: wrap;
-            }
+        >section {
+            flex-wrap: wrap;
         }
     }
 
     .wrapperColumn {
         width: 100%;
+        align-items: center;
+
+        &_shorts {
+            height: 15vh;
+            margin-bottom: 50px;
+        }
     }
 }
