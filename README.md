@@ -24,6 +24,15 @@ The Code Editor App has next features:
 - Vite
 - Sass
 
+### Using Public Api
+
+#### [Piston](https://github.com/engineer-man/piston?tab=readme-ov-file#public-api)
+
+```bash
+GET  https://emkc.org/api/v2/piston/runtimes
+POST https://emkc.org/api/v2/piston/execute
+```
+
 ## Installation and Running
 
 1. Clone the repository
