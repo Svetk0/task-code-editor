@@ -8,13 +8,11 @@ https://task-code-editor.vercel.app/
 
 The Code Editor App has next features:
 
-- support 3 programming languages (Javascript, Go, Python)
-- mock server (JSON Server) to execute user code
-- Error Mode switching using UI
+- support 3 programming languages (Javascript, Go, Python3)
 - adaptive and responsive for mobile devices
 
 <div align="center">
-<img src="./public/readme.png" alt="alt text" width="100%"/>
+<img src="./public/readme.png" alt="screenshots app" width="100%"/>
 </div>
 <br>
 
@@ -23,6 +21,15 @@ The Code Editor App has next features:
 - React + TS
 - Vite
 - Sass
+
+### Using Public Api
+
+#### [Piston](https://github.com/engineer-man/piston?tab=readme-ov-file#public-api)
+
+```bash
+GET  https://emkc.org/api/v2/piston/runtimes
+POST https://emkc.org/api/v2/piston/execute
+```
 
 ## Installation and Running
 
@@ -35,7 +42,7 @@ git clone https://github.com/Svetk0/task-code-editor.git
 2. Move to project folder
 
 ```bash
- cd task-code-editor
+cd task-code-editor
 ```
 
 3. Install all dependencies from `package.json`
@@ -44,22 +51,27 @@ git clone https://github.com/Svetk0/task-code-editor.git
 npm install
 ```
 
-4. If success RUN project
+4. Run the project
+
+- Run only Front
+
+```bash
+npm run dev
+```
+
+- Run Front and Back (Mock Server) simultaneously (server will be run on the port 7001)
 
 ```bash
 npm run fullstack
 ```
 
-5. Check the local host on the port 7000 (server will be run on the port 7001 simultaneously) <br>
+5. Check the local host on the port 7000 <br>
 
 ```bash
 http://localhost:7000/
 ```
-## Limitations
-1. the Error Mode works only localhost
-   
+
 ## Upgrade Suggestions
 
-1. Use a real API (like https://piston.readthedocs.io/en/latest/api-v2/)
-2. Tips block should be updated according to Task block (relevant subjects and topics that need to solve the task)
-3. Add more languages
+1. Tips block should be updated according to Task block (relevant subjects and topics that need to solve the task)
+2. Add more languages

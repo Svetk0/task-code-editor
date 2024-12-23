@@ -375,6 +375,126 @@
         "executed_code": "def greetings(name): \n\tprint(\"Welcome, \" + name) \n  \ngreetings(\"Mickey\")\n",
         "output": "Welcome, Mickey"
       }
+    },
+    {
+      "id": "d39f",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "d382",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "c2f2",
+      "data": {
+        "status": "success",
+        "executed_code": "def greetings(name): \n\tprint(\"Welcome, \" + name) \n  \ngreetings(\"Mickey\")\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "485f",
+      "data": {
+        "status": "success",
+        "executed_code": "def greetings(name): \n\tprint(\"Welcome, \" + name) \n  \ngreetings(\"Mickey\")\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "e835",
+      "data": {
+        "status": "success",
+        "executed_code": "def greetings(name): \n\tprint(\"Welcome, \" + name) \n  \ngreetings(\"Mickey\")\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "7be7",
+      "data": {
+        "status": "success",
+        "executed_code": "def greetings(name): \n\tprint(\"Welcome, \" + name) \n  \ngreetings(\"Mickey\")\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "051c",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "8772",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome123, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "d540",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome123, \" + name;\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "2dc4",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "cafa",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome123, \" + name);\n}\n\ngreetings(\"Mickey\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "b39b",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome123, \" + name);\n}\n\ngreetings(\"Mickey12345\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "b640",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome123, \" + name);\n}\n\ngreetings(\"Mickey12345\"\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "e36b",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey ds\");\n",
+        "output": "Welcome, Mickey"
+      }
+    },
+    {
+      "id": "3ba8",
+      "data": {
+        "status": "success",
+        "executed_code": "\nfunction greetings(name) {\n\tconsole.log(\"Welcome, \" + name);\n}\n\ngreetings(\"Mickey ds\n",
+        "output": "Welcome, Mickey"
+      }
     }
   ],
   "posts": [

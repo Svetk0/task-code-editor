@@ -4,6 +4,7 @@ $tablet: 768px;
 //colors
 $dark-grey: #1e1e1e;
 $white: #ffffff;
+$white-op20: #ffffffbd;
 $grey: #a1a0a0;
 $dark-red: #5a1d1d;
 $orange: #ffa116;
@@ -13,6 +14,9 @@ $dark-yellow: #b89500;
 $bright-dark-yellow: #cca700;
 $cyan-op80: #40c8af35;
 $cyan: #40c8af;
+$red: #c70000;
+
+$white: $white-op20;
 
 //values
 $radius-small: 8px;
