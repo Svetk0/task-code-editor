@@ -30,14 +30,18 @@
 }
 
 .wrapperColumn {
-    width: 50%;
-    height: 60vh;
+    width: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     gap: 15px;
 
     >section>h2 {
         align-self: center;
+    }
+
+    &_shorts {
+        width: clamp(300px, 40vw, 100%);
     }
 }
 
@@ -55,6 +59,7 @@
         align-items: center;
 
         &_shorts {
+            width: 100%;
             height: 15vh;
             margin-bottom: 50px;
         }
